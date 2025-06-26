@@ -1,12 +1,12 @@
 :root {
   --verde-principal: #094302;
-  --verde-secundario: #2F6E3B;
+  --verde-secundario: #2f6e3b;
   --branco: #ffffff;
-  --cinza-claro: #EDEDED;
-  --dourado: #C2A94E;
+  --cinza-claro: #ededed;
+  --dourado: #c2a94e;
   --preto: #000000;
-  --fonte-titulo: 'Poppins', sans-serif;
-  --fonte-corpo: 'Inter', sans-serif;
+  --fonte-titulo: "Poppins", sans-serif;
+  --fonte-corpo: "Inter", sans-serif;
 }
 
 * {
@@ -64,7 +64,8 @@ nav a {
 }
 
 #hero {
-  background: url('../images/foto-escritorio.jpg') center center / cover no-repeat;
+  background: url("../images/foto-escritorio.jpg") center center / cover
+    no-repeat;
   padding: 6rem 2rem;
   text-align: center;
   color: var(--branco);
@@ -72,7 +73,7 @@ nav a {
 }
 
 #hero::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.4); /* Filtro branco translúcido */
@@ -85,11 +86,10 @@ nav a {
 }
 
 #hero h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 
 #hero p {
   color: var(--verde-principal);
@@ -150,7 +150,8 @@ form {
   gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
