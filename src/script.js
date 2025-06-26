@@ -1,44 +1,54 @@
+// script.js - Contabilidade Rezende
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
+  if (form) {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-    const nome = form.querySelector("input[type='text']");
-    const email = form.querySelector("input[type='email']");
-    const mensagem = form.querySelector("textarea");
+      const nome = form.querySelector("input[name='nome']")?.value.trim();
+      const email = form.querySelector("input[name='email']")?.value.trim();
+      const mensagem = form.querySelector("textarea[name='mensagem']")?.value.trim();
 
-    let formValido = true;
+      if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+        return;
+      }
 
-    // Limpa erros antigos
-    [nome, email, mensagem].forEach((campo) => {
-      campo.style.borderColor = "#ccc";
+      // Simulação de envio (ex: integração futura com EmailJS, Formspree, etc)
+      alert("Mensagem enviada com sucesso!\nEntraremos em contato em breve.");
+      form.reset();
     });
+  }
 
-    // Validação simples
-    if (nome.value.trim() === "") {
-      nome.style.borderColor = "red";
-      formValido = false;
-    }
+  // Scroll suave para os links internos
+  document.querySelectorAll("a[href^='#']").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
 
-    if (email.value.trim() === "" || !email.value.includes("@")) {
-      email.style.borderColor = "red";
-      formValido = false;
-    }
+// Scroll suave para os links internos
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
 
-    if (mensagem.value.trim() === "") {
-      mensagem.style.borderColor = "red";
-      formValido = false;
-    }
+    const href = this.getAttribute("href");
 
-    if (!formValido) {
-      alert("Por favor, preencha corretamente todos os campos.");
+    if (href === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
 
-    // Simulação de envio (aqui você pode integrar futuramente com API real)
-    alert(`Obrigado, ${nome.value}! Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.`);
-
-    form.reset();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
   });
 });
