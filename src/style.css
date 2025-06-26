@@ -64,7 +64,7 @@ nav a {
 }
 
 #hero {
-  background: url('/images/foto-escritorio.jpg') center center / cover no-repeat;
+  background: url('./images/foto-escritorio.jpg') center center / cover no-repeat;
   padding: 6rem 2rem;
   text-align: center;
   color: var(--branco);
