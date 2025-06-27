@@ -113,12 +113,17 @@
           Entre em contato conosco e descubra como podemos facilitar a gestão
           contábil da sua vida ou empresa!
         </p>
-        <form>
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu e-mail" required />
-          <textarea rows="5" placeholder="Sua mensagem"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+        <form action="https://formspree.io/f/xanjaeow" method="POST">
+  <input type="text" name="nome" placeholder="Seu nome" required />
+  <input type="email" name="email" placeholder="Seu e-mail" required />
+  <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+
+  <!-- Anti-spam -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <button type="submit">Enviar</button>
+</form>
+
       </div>
     </section>
 
