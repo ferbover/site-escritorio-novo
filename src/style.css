@@ -252,3 +252,56 @@ footer .info p {
   background-color: var(--verde-principal);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.sucesso-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sucesso-conteudo {
+  background-color: var(--branco);
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  color: var(--verde-principal);
+}
+
+.sucesso-conteudo h2 {
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.sucesso-conteudo p {
+  font-family: var(--fonte-corpo);
+  margin-bottom: 1.5rem;
+}
+
+.sucesso-conteudo button {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sucesso-conteudo button:hover {
+  background-color: var(--verde-secundario);
+}
+
+.oculto {
+  display: none;
+}
