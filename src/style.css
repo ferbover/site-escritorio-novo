@@ -252,3 +252,71 @@ footer .info p {
   background-color: var(--verde-principal);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.sucesso-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 67, 2, 0.7); /* verde escuro transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.sucesso-conteudo {
+  background-color: #ffffff;
+  border: 3px solid var(--verde-principal);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.sucesso-conteudo h2 {
+  font-family: var(--fonte-titulo);
+  color: var(--verde-principal);
+  margin-bottom: 1rem;
+}
+
+.sucesso-conteudo p {
+  font-size: 1rem;
+  color: var(--verde-secundario);
+  margin-bottom: 1.5rem;
+}
+
+.sucesso-conteudo button {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: var(--fonte-corpo);
+  transition: background-color 0.3s ease;
+}
+
+.sucesso-conteudo button:hover {
+  background-color: var(--verde-secundario);
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -113,12 +113,13 @@
           Entre em contato conosco e descubra como podemos facilitar a gestão
           contábil da sua vida ou empresa!
         </p>
-        <form>
-          <input type="text" placeholder="Seu nome" required />
-          <input type="email" placeholder="Seu e-mail" required />
-          <textarea rows="5" placeholder="Sua mensagem"></textarea>
-          <button type="submit">Enviar</button>
-        </form>
+<form>
+  <input type="text" name="nome" placeholder="Seu nome" required />
+  <input type="email" name="email" placeholder="Seu e-mail" required />
+  <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
       </div>
     </section>
 
@@ -133,8 +134,8 @@
       </div>
       <div class="footer-col info">
         <p>
-          <strong>Endereço:</strong> R. Maj. Belo Lisboa, 66, Sala 14 - Centro
-        </p>
+          <strong>Endereço:</strong> R. Maj. Belo Lisboa, 66,</p>
+        <p>Condomínio Dona Ilda, Sala 14 - Centro</p>
         <p>Itajubá – MG, 37500-016</p>
         <p>Horário de atendimento:</p>
         <p>Segunda a Sexta, das 09:00-12:00 e 14:00-18:00</p>
@@ -154,5 +155,13 @@
       </div>
     </footer>
     <script src="./src/script.js"></script>
+    <div id="mensagem-sucesso" class="sucesso-modal oculto">
+  <div class="sucesso-conteudo">
+    <h2>Mensagem enviada com sucesso!</h2>
+    <p>Em breve entraremos em contato com você.</p>
+    <button onclick="fecharMensagem()">Fechar</button>
+  </div>
+</div>
+
   </body>
 </html>

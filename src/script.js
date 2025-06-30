@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Simulação de envio (ex: integração futura com EmailJS, Formspree, etc)
-      alert("Mensagem enviada com sucesso!\nEntraremos em contato em breve.");
+      document.getElementById("mensagem-sucesso").classList.remove("oculto");
+
       form.reset();
     });
   }
@@ -52,3 +53,8 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
     }
   });
 });
+
+function fecharMensagem() {
+  document.getElementById("mensagem-sucesso").classList.add("oculto");
+}
+// Adiciona o evento de clique para fechar a mensagem de sucesso
